@@ -1,18 +1,39 @@
 header{
     background-color: black;
-    padding: 22em;
+    padding-bottom: 22em;
+    color: white;
 }
 .logo-container{
-    position: fixed; 
     top: 0; 
     padding: 0; 
     margin: 0;
     width: 40%;
     justify-content: center;
     align-items: center;
-    transform: translateX(60%);
+    transform: translateX(110%);
 }   
 .logo-container img{
     max-width: 100%; 
     height: auto; 
+}
+.checkmark {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid green; /* Cor da borda */
+    border-radius: 50%; /* Torna o círculo */
+    position: relative;
+}
+.checkmark::after {
+    content: '✓'; /* Conteúdo do checkmark */
+    color: green; /* Cor do checkmark */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-container-right img{
+    width: 50%;
+    flex: 1;
 }
