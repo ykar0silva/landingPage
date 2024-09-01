@@ -1,0 +1,18 @@
+header{
+    background-color: black;
+    padding: 22em;
+}
+.logo-container{
+    position: fixed; 
+    top: 0; 
+    padding: 0; 
+    margin: 0;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(60%);
+}   
+.logo-container img{
+    max-width: 100%; 
+    height: auto; 
+}
