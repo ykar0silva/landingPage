@@ -1,6 +1,6 @@
 header{
     background-color: black;
-    padding-bottom: 22em;
+
     color: white;
 }
 .logo-container{
@@ -37,3 +37,35 @@ header{
     width: 50%;
     flex: 1;
 }
+.animated-text {
+    font-size: 2em; /* Tamanho do texto */
+    font-weight: bold; /* Negrito para dar mais destaque */
+    color: purple; /* Cor roxa para o texto */
+    position: relative; /* Necessário para o efeito de luz */
+    overflow: hidden; /* Esconde o efeito fora da área do texto */
+    display: inline-block; /* Mantém o texto dentro de um bloco */
+}
+        /* Animação da luz passando sobre o texto */
+        .animated-text::before {
+            content: ''; /* Elemento vazio para a luz */
+            position: absolute; /* Posiciona a luz */
+            top: 0;
+            left: -100%; /* Começa fora da tela à esquerda */
+            width: 100%; /* Largura da luz */
+            height: 100%; /* Altura da luz */
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent); /* Gradiente de luz */
+            animation: light-sweep 2s infinite; /* Chama a animação */
+        }
+
+        /* Definindo a animação da luz */
+        @keyframes light-sweep {
+            0% {
+                left: -100%; /* Começa fora da tela à esquerda */
+            }
+            50% {
+                left: 100%; /* Move até fora da tela à direita */
+            }
+            100% {
+                left: -100%; /* Retorna à posição inicial */
+            }
+        }
